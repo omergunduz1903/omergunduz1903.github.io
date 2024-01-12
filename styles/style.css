@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "teklifler"
+    "footer"
+    ;
+    grid-template-rows: 100px 750px 400px 200px;
+    gap: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+@media only screen and (max-width: 600px) {
+    header,main,.ikincialan,.teklifler,footer {
+      min-height: 400px 500px 300px 300px 400px;
+    }
+  }
+header{
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    height: auto;
+    
+}
+header > img{
+    flex: 0 0 2%;
+    height: 60px;
+    
+}
+header > span{
+    display: flex;
+    flex: 0 1 78%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+header > span > a{
+    flex: 0 0 15%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+header > span > a:hover{
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid red;
+}
+form{
+    display: flex;
+    gap: 5px;
+}
+header > form > input[type=text]{
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 0px solid white;
+    background-color: rgb(201, 187, 187);
+}
+form > input[type=text]:hover{
+    background-color: white;
+}
+form > input[type=button]{
+    flex: 0 0 35%;
+    border-radius: 10px;
+    border: 0px solid rgb(252, 252, 252);
+    background-color: rgb(201, 187, 187);
+    color: rgb(129, 124, 124);
+}
+form > input[type=button]:hover{
+    background-color: rgb(255, 255, 255);
+}
+main{
+  background: url(../images/bmw-arka-plan.jpg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: white;
+  padding: 40px;
+  
+}
+main > h3{
+    flex: 0 0 25%;
+    display: flex;
+    align-items: end;
+}
+main > h1{
+    font-size: 50px;
+    font-family: 'DM Sans', sans-serif;
+}
+main > a{
+    background-color: rgb(0, 140, 255);
+    flex: 0 0 10%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+}
+main > a:hover{
+    background-color: white;
+    color: rgb(0, 157, 255);
+    flex: 0 0 11%;
+    width: 270px;
+}
+
+.teklifler{
+    grid-area: teklifler;
+    background: url(../images/2.arkaplan.jpg) no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    
+}
+.teklif{
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.teklifler > .teklif > h1{
+    flex:  0 0 100%;
+    height: 120px;
+    font-size: 50px; 
+    color: white;
+}
+.teklifler > .teklif > a{
+    flex: 0 0 30%;
+    height: 100px;
+    background-color: rgb(177, 226, 226);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+.teklifler > .teklif > a:hover{
+    background-color: rgb(177, 226, 226,0.5);
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    background-color: black;
+    padding: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+footer > span{
+    color: white;
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+footer > span > h3{
+    color: gray;
+    font-size: 25px;
+}
+footer > span > a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+footer > span > a:hover{
+    color: red;
+}
+footer > div{
+    flex: 0 1 98%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    padding: 15px;
+}
+footer > div > i{
+    color: white;
+    font-size: 25px;
+}
+footer > div > i:nth-child(1):hover{
+    color: rgb(255, 0, 76);
+}
+footer > div > i:nth-child(2):hover{
+    color: rgb(0, 153, 255);
+}
+footer > div > i:nth-child(3):hover{
+    color: rgb(47, 38, 226);
+}
+
+footer > span > img{
+    width: 60px;
+    height: 60px;
+}

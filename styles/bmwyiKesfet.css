@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "araba"
+    "foto"
+    ;
+    grid-template-rows: 100px 100vh 300px 500px;
+    gap: 5px;
+    background-color: black;
+}
+
+header{
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header > img{
+    flex: 0 0 1%;
+    height: 50px;
+   
+}
+header > span{
+    display: flex;
+    flex: 0 1 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header > span > a{
+    flex: 0 0 17%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+header > span > a:hover{
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid red;
+}
+form{
+    display: flex;
+    gap: 5px;
+}
+header > form > input[type=text]{
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 0px solid white;
+    background-color: rgb(201, 187, 187);
+}
+form > input[type=text]:hover{
+    background-color: white;
+}
+form > input[type=button]{
+    flex: 0 0 35%;
+    border-radius: 10px;
+    border: 0px solid rgb(252, 252, 252);
+    background-color: rgb(201, 187, 187);
+    color: rgb(129, 124, 124);
+}
+form > input[type=button]:hover{
+    background-color: rgb(255, 255, 255);
+}
+main{
+    background: url(../bmwKesfetİmages/BMW\ 4\ Serisi\ Cabrio\ M\ Otomobilleri.jpg) no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+main > h1{
+    flex: 0 0 25%;
+    display: flex;
+    align-items: end;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+main > h2{
+    font-size: 40px;
+    color: white;
+}
+main > h3{
+    font-size: 20px;
+    color: white;
+    flex: 0 0 55%;
+    display: flex;
+    align-items: end;
+}
+.araba{
+    grid-area: araba;
+    background-color: rgb(0, 89, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.araba > h1{
+    color: rgb(255, 255, 255);
+}
+.araba > ul > li{
+    color: white;
+}
+.foto{
+    grid-area: foto;
+}
+img{
+    width: 500px;
+    height: 300px;
+}
